@@ -3,11 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 import { UserSession } from 'blockstack';
 
-const userSession = new UserSession
+const userSession = new UserSession({}) // requires appconfig.
 
 class App extends Component {
-  constructor(){
-
+  
+  handleSignin = event => {
+    event.preventDefault();
+    userSession.
   }
   render() {
     return (
