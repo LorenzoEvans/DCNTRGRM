@@ -7,7 +7,7 @@ class SignIn extends Component {
       <div>
         <div>
           <h1>Landing</h1>
-          <button onClick={handleSignIn}></button>
+          <button onClick={handleSignIn}>Sign In</button>
         </div>
       </div>
     )

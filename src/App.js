@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { UserSession } from 'blockstack';
 import { appconfig } from './utils/utils';
+import SignIn from './SignIn';
 
 const userSession = new UserSession({appConfig}) // requires appconfig.
 
