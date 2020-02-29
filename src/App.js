@@ -2,33 +2,25 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { UserSession } from 'blockstack';
+import { appconfig } from './utils/utils';
 
-const userSession = new UserSession({}) // requires appconfig.
+const userSession = new UserSession({appConfig}) // requires appconfig.
 
 class App extends Component {
   
-  handleSignin = event => {
+  handleSignIn = event => {
     event.preventDefault();
-    userSession.
+    userSession.redirectToSignIn(); // start blockstack sign in w/ new user sesh
+  }
+
+  handleSignOut = event => {
+    event.preventDefault();
+    userSession.signUserOut(window.location.origin) // why origin?
   }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      // SignIn component
+      // Profile Component
     );
   }
 }
