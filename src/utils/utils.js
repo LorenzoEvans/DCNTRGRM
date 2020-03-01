@@ -17,6 +17,12 @@ export const removePost = (idx, state) => {
   const removedPosts = tasks.splice(idx, 1);
 
   posts = removePost;
-  
-  return posts
+
+  return posts;
+}
+
+export const addPost = (state) => {
+  const post = state.value;
+  const posts = copyJSON(state.posts);
+  tasks.push(post);
 }

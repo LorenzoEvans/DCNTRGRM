@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { UserSession, Person } from 'blockstack';
-import {appConfig, DCTRGRMS_FILENAME} from './utils/utils';
+import {appConfig, DCTRGRMS_FILENAME, removePost, addPost, copyJSON} from './utils/utils';
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -17,31 +17,63 @@ class Profile extends Component {
     // const [posts, setPosts] = useState({post: '', caption: '',})
     // const [comments, setComments] = useState({author: '', content: ''})
   }
-  loadPosts = () => {
+
+  loadPostsHandler = () => {
+
     const options = {decrypt:true};
     this.props.userSession.getFile(DCTRGRMS_FILENAME, options)
                           .then((content) => {
                             if (content) {
                               const posts = JSON.parse(content);
-                              this.setState({posts})
+                              this.setState({posts});
                             }
-                          })
+                          });
   }
-  savePosts = (posts) => {
+
+  savePostsHandler = (posts) => {
+
     const options = {encrypt: true}
-    this.props.userSession.putFile(DCTRGRMS_FILENAME, JSON.stringify(tasks), options);
+    this.props.userSession.putFile(DCTRGRMS_FILENAME, JSON.stringify(posts), options);
+
   }
 
   handleChange = (event) => {
+
     this.setState({value: event.target.value});
   }
 
-  removePost = (event) => {
+  removePostHandler = (event) => {
+
     event.preventDefault();
-    const posts =
+    const posts = removePostHandler(event.currentTarget.dataset.index, this.state);
+    this.setState({ posts });
+    this.savePostsHandler(posts)
+
+  }
+
+  addPostHandler = (event) => {
+    event.preventDefault();
+    
+    const posts = addPost(this.state);
+
+    this.setState({value: ''});
+    this.savePostsHandler(posts);
   }
   componentDidMount() {
     this.loadPosts();
+  }
+
+  render() {
+    const username = this.props.userSession.loadUserData().username;
+    const profile = this.props.userSession.loadUserData();
+
+    const person = new Person(profile);
+
+    return(
+      <div>
+        
+      </div>
+    )
   }
 }
 
