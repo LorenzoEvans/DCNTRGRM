@@ -6,7 +6,8 @@ class Profile extends Component {
     super(props);
 
     this.state = {
-      posts: []
+      posts: [],
+      value: ""
     }
 
     // refactor hooks back in later
@@ -26,7 +27,19 @@ class Profile extends Component {
                             }
                           })
   }
+  savePosts = (posts) => {
+    const options = {encrypt: true}
+    this.props.userSession.putFile(DCTRGRMS_FILENAME, JSON.stringify(tasks), options);
+  }
 
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
+  }
+
+  removePost = (event) => {
+    event.preventDefault();
+    const posts =
+  }
   componentDidMount() {
     this.loadPosts();
   }
