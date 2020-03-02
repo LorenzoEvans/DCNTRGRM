@@ -30,6 +30,10 @@ class App extends Component {
           { !userSession.isUserSignedIn() ?
           <SignIn userSession={userSession} handleSignIn={this.handleSignIn}/>
           : <Profile userSession={userSession} handleSignOut={this.handleSignOut} />}
+          {/* We need to make the above the default app...this login process will become more complex */}
+          {/* We want people to be able to access the site, then SignIn */}
+          {/* After sign in, we don't want the profile to load, but the landing site page */}
+          {/* However, we do want the profile loaded in another accessible component */}
         </div>
       </div>
       // SignIn component

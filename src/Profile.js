@@ -60,7 +60,7 @@ class Profile extends Component {
     this.savePostsHandler(posts);
   }
   componentDidMount() {
-    this.loadPosts();
+    this.loadPostsHandler();
   }
 
   render() {
@@ -71,7 +71,7 @@ class Profile extends Component {
 
     return(
       <div>
-        
+        word
       </div>
     )
   }
