@@ -66,12 +66,15 @@ class Profile extends Component {
   render() {
     const username = this.props.userSession.loadUserData().username;
     const profile = this.props.userSession.loadUserData();
-
+    const { handleSignOut } = this.props;
     const person = new Person(profile);
 
     return(
-      <div>
+      <div className="uk-background-primary">
         word
+        <button onClick={handleSignOut}>
+          SignOut
+        </button> 
       </div>
     )
   }
