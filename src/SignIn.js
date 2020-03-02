@@ -4,10 +4,10 @@ class SignIn extends Component {
   render () {
     const { handleSignIn} = this.props; // going to come from App
     return(
-      <div>
-        <div>
-          <h1>Landing</h1>
-          <button onClick={handleSignIn}>Sign In</button>
+      <div className="uk-background-default">
+        <div className="uk-background-default">
+          <h1 className="uk-background-default">Landing</h1>
+          <button onClick={handleSignIn}>Sign In With Blockstack</button>
         </div>
       </div>
     )

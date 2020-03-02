@@ -45,7 +45,7 @@ class Profile extends Component {
   removePostHandler = (event) => {
 
     event.preventDefault();
-    const posts = removePostHandler(event.currentTarget.dataset.index, this.state);
+    const posts = removePost(event.currentTarget.dataset.index, this.state);
     this.setState({ posts });
     this.savePostsHandler(posts)
 
