@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { UserSession } from 'blockstack';
 import { appConfig } from './utils/utils';
 import SignIn from './SignIn';
