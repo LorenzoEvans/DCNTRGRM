@@ -6,7 +6,7 @@ class SignIn extends Component {
     return(
       <div className="uk-background-primary">
         <div>
-          <h1>Landing</h1>
+          <h1 className="text-changer">Landing</h1>
           <button onClick={handleSignIn}>Sign In With BlockStack</button>
         </div>
       </div>

@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.scss';
 import { UserSession } from 'blockstack';
 import { appConfig } from './utils/utils';
-import SignIn from './SignIn';
-import Profile from './Profile';
+import SignIn from './components/SignIn';
+import Profile from './components/Profile';
 import IsPending from './components/Authentication/BlockAuth';
 
 const userSession = new UserSession({appConfig}) // requires appconfig.

@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { UserSession, Person } from 'blockstack';
-import {appConfig, DCTRGRMS_FILENAME, removePost, addPost, copyJSON} from './utils/utils';
+import {appConfig, DCTRGRMS_FILENAME, removePost, addPost, copyJSON} from '../utils/utils';
 class Profile extends Component {
   constructor(props) {
     super(props);
