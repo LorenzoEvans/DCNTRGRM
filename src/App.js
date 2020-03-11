@@ -20,6 +20,10 @@ class App extends Component {
     userSession.signUserOut(window.location.origin) // why origin?
   }
 
+  handleSearch = (event, searchable) => {
+    
+  }
+
   componentDidMount() {
     IsPending(userSession);
   }
