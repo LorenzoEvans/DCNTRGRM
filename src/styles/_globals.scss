@@ -131,6 +131,10 @@ a {
   text-decoration: none;
 }
 
+.bg-primary {
+  background-color: #{$primary-color};
+}
+
 .flex-row-between {
   display: flex;
   flex-direction: row;
@@ -147,4 +151,13 @@ a {
   color: $primary-color;
   // background: $secondary-dark;
   background-color: #{$primary-color};
+}
+
+.site-name {
+  font-size: 4rem;
+}
+
+.blockstack-sign-in {
+  height: 3em;
+  border-radius: 2px;
 }

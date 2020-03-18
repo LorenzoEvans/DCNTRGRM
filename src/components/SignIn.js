@@ -4,11 +4,9 @@ class SignIn extends Component {
   render () {
     const { handleSignIn} = this.props; // going to come from App
     return(
-      <div>
-        <h1 className="test-sass">DCNTRGM</h1>
-        <div>
-          <button onClick={handleSignIn}>Sign In With BlockStack</button>
-        </div>
+      <div className="flex-row-between bg-primary">
+        <h1 className="site-name">DCNTRGM</h1>
+          <button className="blockstack-sign-in" onClick={handleSignIn}>Sign In With BlockStack</button>
       </div>
     )
   }

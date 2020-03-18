@@ -5,6 +5,7 @@ import { UserSession } from 'blockstack';
 import { appConfig } from './utils/utils';
 import SignIn from './components/SignIn';
 import Profile from './components/Profile';
+import LandingPage from './components/LandingPage';
 import IsPending from './components/Authentication/BlockAuth';
 
 const userSession = new UserSession({appConfig}) // requires appconfig.
@@ -32,7 +33,7 @@ class App extends Component {
       <div>
         <div>
           { !userSession.isUserSignedIn() ?
-          <SignIn userSession={userSession} handleSignIn={this.handleSignIn}/>
+          <LandingPage userSession={userSession} handleSignIn={this.handleSignIn}/>
           : <Profile userSession={userSession} handleSignOut={this.handleSignOut} />}
           {/* We need to make the above the default app...this login process will become more complex */}
           {/* We want people to be able to access the site, then SignIn */}
