@@ -1,3 +1,4 @@
+@import 'variables';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet');
 html,
 body,
@@ -88,7 +89,6 @@ video {
   vertical-align: baseline;
 }
 
-@import 'variables';
 /* HTML5 display-role reset for older browsers */
 
 * {
@@ -146,5 +146,7 @@ a {
 }
 
 .test-sass {
-  color: red;
+  color: $primary-color;
+  // background: $secondary-dark;
+  background-color: #{$primary-color};
 }
