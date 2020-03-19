@@ -141,6 +141,12 @@ a {
   justify-content: space-between;
 }
 
+.flex-row-even {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .flex-column-between {
   display: flex;
   flex-direction: row;
