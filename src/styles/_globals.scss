@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet');
 html,
 body,
@@ -131,14 +132,28 @@ a {
   text-decoration: none;
 }
 
+.nav-bar-text {
+  font-size: 4rem;
+}
+
 .bg-primary {
   background-color: #{$primary-color};
 }
 
+.w-20pc {
+  width: 20%;
+}
+
+.text-primary {
+  color: #{$text-on-prim};
+}
+
+.primary-dark {
+  background-color: #{$primary-dark};
+}
+
 .flex-row-between {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex-row(row, space-evenly);
 }
 
 .flex-row-even {
@@ -161,6 +176,7 @@ a {
 
 .site-name {
   font-size: 4rem;
+  color: #{$secondary-light}
 }
 
 .blockstack-sign-in {

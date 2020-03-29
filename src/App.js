@@ -25,9 +25,10 @@ class App extends Component {
     
   }
 
-  componentDidMount() {
-    IsPending(userSession);
-  }
+  // componentDidMount() {
+  //   IsPending(userSession);
+  // }
+
   render() {
     return (
       <div>
